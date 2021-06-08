@@ -4,6 +4,9 @@ namespace MYMVC\Lib;
 
 class FrontController
 {
+    const NOT_FOUND_CONTROLLER = 'MYMVC\Controllers\notFoundController';
+    const NOT_FOUND_ACTION     = 'notFoundAction';
+
     private $_controller = 'index';
     private $_action     = 'default';
     private $_params     = array();
@@ -28,6 +31,16 @@ class FrontController
     }
 
     public function dispatch(){
+        $controllerClassName = 'MYMVC\Controllers\\' . ucfirst($this->_controller) . 'Controller';
+        $actionName          = $this->_action . 'Action';
+        if (!class_exists($controllerClassName)){
+            $controllerClassName = self::NOT_FOUND_CONTROLLER;
+        }
+        $controller = new $controllerClassName();
+        if (!method_exists($controller,$actionName)){
+            $actionName = self::NOT_FOUND_ACTION;
+        }
 
+        $controller->$actionName();
     }
 }
