@@ -38,9 +38,11 @@ class FrontController
         }
         $controller = new $controllerClassName();
         if (!method_exists($controller,$actionName)){
-            $actionName = self::NOT_FOUND_ACTION;
+            $this->_action = $actionName = self::NOT_FOUND_ACTION;
         }
-
+        $controller->setController($this->_controller);
+        $controller->setAction($this->_action);
+        $controller->setParams($this->_params);
         $controller->$actionName();
     }
 }
