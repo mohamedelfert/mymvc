@@ -27,6 +27,15 @@ class AbstractController
     }
 
     protected function _view(){
-
+        if ($this->_action === FrontController::NOT_FOUND_ACTION){
+            require_once VIEW_PATH . 'notfound' . DS . 'notfound.view.php';
+        }else{
+            $view = VIEW_PATH . $this->_controller . DS . $this->_action . '.view.php';
+            if (file_exists($view)){
+                require_once $view;
+            }else{
+                require_once VIEW_PATH . 'notfound' . DS . 'noview.view.php';
+            }
+        }
     }
 }
