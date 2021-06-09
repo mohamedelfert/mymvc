@@ -1,7 +1,6 @@
 <?php
 
 namespace MYMVC\Controllers;
-
 use MYMVC\Lib\FrontController;
 
 class AbstractController
@@ -9,6 +8,8 @@ class AbstractController
     protected $_controller;
     protected $_action;
     protected $_params;
+
+    protected $_data = [];
 
     public function notFoundAction(){
         $this->_view();
@@ -32,6 +33,7 @@ class AbstractController
         }else{
             $view = VIEW_PATH . $this->_controller . DS . $this->_action . '.view.php';
             if (file_exists($view)){
+                extract($this->_data);
                 require_once $view;
             }else{
                 require_once VIEW_PATH . 'notfound' . DS . 'noview.view.php';
