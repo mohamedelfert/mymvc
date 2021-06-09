@@ -64,7 +64,11 @@ class AbstractModel
         $sql     = 'SELECT * FROM ' . static::$tableName;
         $stmt    = DatabaseHandler::factory()->prepare($sql);
         $stmt->execute();
-        $results = $stmt->fetchAll(\PDO::FETCH_CLASS ,get_called_class());
+        if (method_exists(get_called_class(),'__construct')){
+            $results = $stmt->fetchAll(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE,get_called_class(),array_keys(static::$tableSchema));
+        }else{
+            $results = $stmt->fetchAll(\PDO::FETCH_CLASS ,get_called_class());
+        }
         return (is_array($results) && !empty($results) ? $results : false);
     }
 
@@ -72,8 +76,12 @@ class AbstractModel
         $sql  = 'SELECT * FROM ' . static::$tableName . ' WHERE ' . static::$primaryKey . ' = "' . $pk . '"';
         $stmt = DatabaseHandler::factory()->prepare($sql);
         if ($stmt->execute() === true){
-            $obj = $stmt->fetchAll(\PDO::FETCH_CLASS ,get_called_class());
-            return array_shift($obj);
+            if (method_exists(get_called_class(),'__construct')){
+                $obj = $stmt->fetchAll(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE,get_called_class(),array_keys(static::$tableSchema));
+            }else{
+                $obj = $stmt->fetchAll(\PDO::FETCH_CLASS ,get_called_class());
+            }
+            return !empty($obj) ? array_shift($obj) : false;
         }
         return false;
 

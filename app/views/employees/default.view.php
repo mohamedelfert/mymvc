@@ -1,7 +1,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title> Add Employees And Show Information</title>
+        <title> Show Employees Information</title>
         <style type="text/css">
             *{
                 margin: 0;

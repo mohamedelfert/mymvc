@@ -1,7 +1,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title> Add Employee </title>
+        <title> Edit Employee</title>
         <style type="text/css">
             *{
                 margin: 0;
@@ -72,35 +72,35 @@
                                 <td><label for="name">Employee Name :</label></td>
                             </tr>
                             <tr>
-                                <td><input type="text" name="name" id="name" placeholder="Write Your Name Here !" required="required"></td>
+                                <td><input type="text" name="name" id="name" placeholder="Write Your Name Here !" required="required" value="<?= $employees->name ?>"></td>
                             </tr>
 
                             <tr>
                                 <td><label for="age">Employee Age :</label></td>
                             </tr>
                             <tr>
-                                <td><input type="number" name="age" id="age" min="23" max="45" required="required"></td>
+                                <td><input type="number" name="age" id="age" min="23" max="45" required="required" value="<?= $employees->age ?>"></td>
                             </tr>
 
                             <tr>
                                 <td><label for="address">Employee Address :</label></td>
                             </tr>
                             <tr>
-                                <td><input type="text" name="address" id="address" placeholder="Write Your Address Here !" required="required"></td>
+                                <td><input type="text" name="address" id="address" placeholder="Write Your Address Here !" required="required" value="<?= $employees->address ?>"></td>
                             </tr>
 
                             <tr>
                                 <td><label for="salary">Employee Salary :</label></td>
                             </tr>
                             <tr>
-                                <td><input type="number" name="salary" id="salary" step="0.01" min="1500" max="7000" required="required"></td>
+                                <td><input type="number" name="salary" id="salary" step="0.01" min="1500" max="7000" required="required" value="<?= $employees->salary ?>"></td>
                             </tr>
 
                             <tr>
                                 <td><label for="tax">Employee Tax :</label></td>
                             </tr>
                             <tr>
-                                <td><input type="number" name="tax" id="tax" step="0.01" min="1" max="5" required="required"></td>
+                                <td><input type="number" name="tax" id="tax" step="0.01" min="1" max="5" required="required" value="<?= $employees->tax ?>"></td>
                             </tr>
 
                             <tr>
