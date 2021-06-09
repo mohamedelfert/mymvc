@@ -2,6 +2,8 @@
     <head>
         <meta charset="UTF-8">
         <title> Show Employees Information</title>
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/font-awesome.min.css">
         <style type="text/css">
             *{
                 margin: 0;
@@ -101,8 +103,8 @@
                                         <td><?= $employee->calc_salary() ?></td>
                                         <td><?= $employee->tax ?></td>
                                         <td>
-                                            <a href="/employees/edit/<?= $employee->id ?>">Edit</a>
-                                            <a href="/employees/delete/<?= $employee->id ?>">Delete</a>
+                                            <a href="/employees/edit/<?= $employee->id ?>"><i class="fa fa-edit"></i></a>
+                                            <a href="/employees/delete/<?= $employee->id ?>"><i class="fa fa-close"></i></a>
                                         </td>
                                     </tr>
                                     <?php
@@ -118,7 +120,7 @@
                     </table>
                 </fieldset>
 
-                <a href="/employees/add">Add New Employee</a>
+                <a href="/employees/add" class="btn btn-danger">Add New Employee</a>
 
             </div>
 

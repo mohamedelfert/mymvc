@@ -2,6 +2,8 @@
     <head>
         <meta charset="UTF-8">
         <title> Add Employee </title>
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/font-awesome.min.css">
         <style type="text/css">
             *{
                 margin: 0;
@@ -109,7 +111,7 @@
                         </table>
                     </fieldset>
 
-                    <a href="/employees">Return To Employees</a>
+                    <a href="/employees" class="btn btn-danger btn-block">Return To Employees</a>
 
                 </form>
             </div>
