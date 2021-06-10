@@ -1,8 +1,1 @@
-<html>
-    <head>
-
-    </head>
-    <body>
-        <h1>This File Not Found</h1>
-    </body>
-</html>
+<h1>عفوا الملف المطلوب غير موجود !</h1>

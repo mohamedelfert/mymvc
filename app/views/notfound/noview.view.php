@@ -1,8 +1,1 @@
-<html>
-    <head>
-
-    </head>
-    <body>
-        <h1>This View Not Found</h1>
-    </body>
-</html>
+<h1>عفوا الصفحه المطلوبه غير موجوده !</h1>

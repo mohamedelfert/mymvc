@@ -6,6 +6,7 @@ if (!defined('DS')){
 
 define('APP_PATH',dirname(realpath(__FILE__)));
 define('VIEW_PATH',APP_PATH . DS . 'views' . DS);
+define('TEMPLATE_PATH',APP_PATH . DS . 'template' . DS);
 
 // Database Credentials
 defined('DATABASE_HOST_NAME')       ? null : define ('DATABASE_HOST_NAME', 'localhost');
