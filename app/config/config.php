@@ -4,9 +4,12 @@ if (!defined('DS')){
     define('DS' , DIRECTORY_SEPARATOR);
 }
 
-define('APP_PATH',dirname(realpath(__FILE__)));
+define('APP_PATH',dirname(realpath(__FILE__)) . DS . '..');
 define('VIEW_PATH',APP_PATH . DS . 'views' . DS);
 define('TEMPLATE_PATH',APP_PATH . DS . 'template' . DS);
+
+define('CSS','/css/');
+define('JS','/js/');
 
 // Database Credentials
 defined('DATABASE_HOST_NAME')       ? null : define ('DATABASE_HOST_NAME', 'localhost');

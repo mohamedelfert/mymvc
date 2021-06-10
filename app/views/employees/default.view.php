@@ -1,5 +1,5 @@
 <!-- The main Div contain Add Form And Show Information -->
-<div class="main_div">
+<div class="main_div col-lg-12">
 
     <?php
     if (isset($_SESSION['success'])){

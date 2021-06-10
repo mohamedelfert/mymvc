@@ -31,7 +31,7 @@ class AbstractController
         if ($this->_action === FrontController::NOT_FOUND_ACTION){
             require_once TEMPLATE_PATH . 'templateheaderstart.php';
             require_once TEMPLATE_PATH . 'templateheaderend.php';
-            require_once TEMPLATE_PATH . 'wrapperend.php';
+            require_once TEMPLATE_PATH . 'wrapperstart.php';
             require_once TEMPLATE_PATH . 'navbar.php';
             require_once TEMPLATE_PATH . 'sidbar.php';
             require_once VIEW_PATH . 'notfound' . DS . 'notfound.view.php';
@@ -44,7 +44,7 @@ class AbstractController
                 extract($this->_data);
                 require_once TEMPLATE_PATH . 'templateheaderstart.php';
                 require_once TEMPLATE_PATH . 'templateheaderend.php';
-                require_once TEMPLATE_PATH . 'wrapperend.php';
+                require_once TEMPLATE_PATH . 'wrapperstart.php';
                 require_once TEMPLATE_PATH . 'navbar.php';
                 require_once TEMPLATE_PATH . 'sidbar.php';
                 require_once $view;
@@ -54,7 +54,7 @@ class AbstractController
             }else{
                 require_once TEMPLATE_PATH . 'templateheaderstart.php';
                 require_once TEMPLATE_PATH . 'templateheaderend.php';
-                require_once TEMPLATE_PATH . 'wrapperend.php';
+                require_once TEMPLATE_PATH . 'wrapperstart.php';
                 require_once TEMPLATE_PATH . 'navbar.php';
                 require_once TEMPLATE_PATH . 'sidbar.php';
                 require_once VIEW_PATH . 'notfound' . DS . 'noview.view.php';
