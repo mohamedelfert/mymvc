@@ -1,6 +1,7 @@
 <?php
-
+// This return array That Contain All Template File As array With Keys And Values
 return [
+    // template key contain all files for my website
     'template' => [
         'wrapper_start'     => TEMPLATE_PATH . 'wrapperstart.php',
         'navbar'            => TEMPLATE_PATH . 'navbar.php',
@@ -9,6 +10,8 @@ return [
         'wrapper_end'       => TEMPLATE_PATH . 'wrapperend.php',
         'footer'            => TEMPLATE_PATH . 'footer.php'
     ],
+
+    // header_resources key contains all css and js files for my website that add in header
     'header_resources' => [
         'css' => [
             'bootstrap_min' => CSS . 'bootstrap.min.css',
@@ -26,6 +29,8 @@ return [
             'Order_js'  => JS . 'Order.js'
         ]
     ],
+
+    // footer_resources key contains all js files for my website that add in the end of my website
     'footer_resources' => [
         'jquery_min'         => JS . 'jquery.min.js',
         'bootstrap_bundle'   => JS . 'bootstrap.bundle.min.js',
