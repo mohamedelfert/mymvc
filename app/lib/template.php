@@ -37,9 +37,9 @@ class Template
         if (!array_key_exists('template',$this->_templateParts)){
             trigger_error('Error You Have To Define Template Blocks',E_USER_WARNING);
         }else{
-            extract($this->_data);
             $parts = $this->_templateParts['template'];
             if (!empty($parts)){
+                extract($this->_data);
                 foreach ($parts as $partKey => $file){
                     if ($partKey === ':view'){
                         require_once $this->_action_view;
