@@ -7,8 +7,7 @@ return [
         'navbar'            => TEMPLATE_PATH . 'navbar.php',
         'sidbar'            => TEMPLATE_PATH . 'sidbar.php',
         ':view'             => ':action_view',
-        'wrapper_end'       => TEMPLATE_PATH . 'wrapperend.php',
-        'footer'            => TEMPLATE_PATH . 'footer.php'
+        'wrapper_end'       => TEMPLATE_PATH . 'wrapperend.php'
     ],
 
     // header_resources key contains all css and js files for my website that add in header
@@ -24,6 +23,7 @@ return [
             'style3'        => CSS . 'style3.css',
             'shop-homepage' => CSS . 'shop-homepage.css',
             'Order'         => CSS . 'Order.css',
+            'add_emp_form'  => CSS . 'add_emp_form.css',
         ],
         'js' => [
             'Order_js'  => JS . 'Order.js'

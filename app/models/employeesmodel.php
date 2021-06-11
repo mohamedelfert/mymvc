@@ -9,6 +9,10 @@ class EmployeesModel extends AbstractModel {
     public $address;
     public $salary;
     public $tax;
+    public $gender;
+    public $shift;
+    public $systems;
+    public $notes;
 
     protected static $tableName = 'employee';
 
@@ -17,7 +21,11 @@ class EmployeesModel extends AbstractModel {
       'age'         => self::DATA_TYPE_INT,
       'address'     => self::DATA_TYPE_STR,
       'salary'      => self::DATA_TYPE_DECIMAL,
-      'tax'         => self::DATA_TYPE_DECIMAL
+      'tax'         => self::DATA_TYPE_DECIMAL,
+      'gender'      => self::DATA_TYPE_INT,
+      'shift'       => self::DATA_TYPE_INT,
+      'systems'     => self::DATA_TYPE_STR,
+      'notes'        => self::DATA_TYPE_STR
     );
 
     protected static $primaryKey = 'id';

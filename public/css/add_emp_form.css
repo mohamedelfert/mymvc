@@ -9,19 +9,19 @@
 }
 
 .register .register-form{
-    padding: 8% 9% 1% 9%;
+    padding: 10% 5% 1% 5%;
     margin-top: 7.5%;
 }
 .btnRegister{
     float: right;
-    margin-top: 10%;
+    margin-top: 5%;
     border: none;
     border-radius: 1.5rem;
     padding: 2%;
     background: #0062cc;
     color: #fff;
     font-weight: 600;
-    width: 50%;
+    width: 5%;
     cursor: pointer;
 }
 .register .nav-tabs{
