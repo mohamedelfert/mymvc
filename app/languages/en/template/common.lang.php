@@ -1,6 +1,7 @@
 <?php
 
 $_['text_logo']               = 'Electronic Store';
+$_['text_title']               = 'Electronic Store';
 $_['text_profile']            = 'My Profile';
 $_['text_change_password']    = 'Change password';
 $_['text_account_settings']   = 'Account settings';

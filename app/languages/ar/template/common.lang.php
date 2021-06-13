@@ -1,6 +1,7 @@
 <?php
 
 $_['text_logo']               = 'المخزن الإلكتروني';
+$_['text_title']              = 'المخزن الإلكتروني';
 $_['text_profile']            = 'البيانات الشخصية';
 $_['text_change_password']    = 'تغيير كلمة المرور';
 $_['text_account_settings']   = 'إعدادات الحساب';
