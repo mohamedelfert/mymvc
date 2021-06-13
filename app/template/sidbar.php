@@ -5,7 +5,7 @@
             <div class="list-group-item" style="text-align:center">
                 <img src="/images/avatar/avatar1.jpg" style="width:30%;border-radius:50%;">
                 <p><a href="" class="list-group-item" style="padding:2px"><i class="fa fa-users"></i>  Mohamed Elfert  </a></p>
-                <p class="list-group-item" style="padding:1px"><i class="fa fa-eye"></i>  المدير العام  </p>
+                <p class="list-group-item" style="padding:1px"><i class="fa fa-eye"></i>  <?= @$text_app_manager ?>  </p>
             </div>
         </div>
     </aside>
@@ -14,9 +14,10 @@
 
     <aside>
         <div class="list-group text-right">
-            <a href="/" class="list-group-item list-group-item-action active"><i class="fa fa-dashboard"></i>  الاحصائيات العامه  </a>
-            <a href="/employees" class="list-group-item"><i class="fa fa-users"></i>  الموظفين  </a>
-            <a href="/auth/logout" class="list-group-item"><i class="fa fa-star"></i>  تسجيل الخروج  </a>
+            <a href="/" class="list-group-item list-group-item-action active"><i class="fa fa-dashboard"></i>  <?= @$text_general_statistics ?>  </a>
+            <a href="/employees" class="list-group-item"><i class="fa fa-users"></i>  <?= @$text_sidbar_employees ?>  </a>
+            <a href="/language" class="list-group-item"><i class="fa fa-language"></i>  <?= @$text_change_language ?>  </a>
+            <a href="/auth/logout" class="list-group-item"><i class="fa fa-star"></i> <?= @$text_log_out ?> </a>
         </div>
     </aside>
 </div>

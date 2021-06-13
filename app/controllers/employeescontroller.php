@@ -11,12 +11,14 @@ class EmployeesController extends AbstractController
     use Helper;
 
     public function defaultAction(){
+        $this->_languages->load('template.common');
         $this->_languages->load('employees.default');
         $this->_data['employees'] = EmployeesModel::getAll();
         $this->_view();
     }
 
     public function addAction(){
+        $this->_languages->load('template.common');
         $this->_languages->load('employees.add');
         if (isset($_POST['submit'])){
             $emp = new EmployeesModel();
@@ -42,6 +44,7 @@ class EmployeesController extends AbstractController
     }
 
     public function editAction(){
+        $this->_languages->load('template.common');
         $this->_languages->load('employees.edit');
         $id = $this->filterInt($this->_params[0]);
         $emp = EmployeesModel::getByPk($id);
