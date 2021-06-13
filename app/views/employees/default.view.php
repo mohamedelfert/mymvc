@@ -21,7 +21,7 @@
                         <th><?= @$text_employees_address ?></th>
                         <th><?= @$text_employees_salary ?></th>
                         <th><?= @$text_employees_tax ?></th>
-                        <th><?= @$text_employees_options ?></th>
+                        <th><?= @$text_employees_control ?></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -39,7 +39,7 @@
                                 <td><?= $employee->tax ?></td>
                                 <td>
                                     <a href="/employees/edit/<?= $employee->id ?>"><i class="fa fa-edit"></i></a>
-                                    <a href="/employees/delete/<?= $employee->id ?>" onclick="if (!confirm('Doy You Want To Delete This Employee ?')) return false"><i class="fa fa-close"></i></a>
+                                    <a href="/employees/delete/<?= $employee->id ?>" onclick="if (!confirm('<?= @$text_employees_delete_confirm ?>')) return false"><i class="fa fa-close"></i></a>
                                 </td>
                             </tr>
                             <?php
