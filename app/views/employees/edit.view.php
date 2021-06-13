@@ -69,15 +69,15 @@
                                         <div class="maxl">
                                             <label class="control-label col-sm-12" for="systems">انظمه التشغيل التي يعمل عليها :</label>
                                             <label class="radio inline col-sm-3">
-                                                <input type="checkbox" name="systems[]" id="systems" value="windows" <?= $employees->shift == 'windows' ? 'checked' : '' ?> >
+                                                <input type="checkbox" name="systems[]" id="systems" value="windows" <?= (@in_array('windows',$employees->systems) ? 'checked' : '') ?> >
                                                 <span> ويندوز </span>
                                             </label>
                                             <label class="radio inline col-sm-3">
-                                                <input type="checkbox" name="systems[]" id="systems" value="linux" <?= $employees->shift == 'linux' ? 'checked' : '' ?>>
+                                                <input type="checkbox" name="systems[]" id="systems" value="linux" <?= (@in_array('linux',$employees->systems) ? 'checked' : '') ?>>
                                                 <span> لينوكس </span>
                                             </label>
                                             <label class="radio inline col-sm-3">
-                                                <input type="checkbox" name="systems[]" id="systems" value="mac" <?= $employees->shift == 'mac' ? 'checked' : '' ?>>
+                                                <input type="checkbox" name="systems[]" id="systems" value="mac" <?= (@in_array('mac',$employees->systems) ? 'checked' : '') ?>>
                                                 <span> ماك </span>
                                             </label>
                                         </div>

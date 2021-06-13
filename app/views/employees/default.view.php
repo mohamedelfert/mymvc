@@ -13,7 +13,7 @@
     <div class="show_info">
         <fieldset>
             <legend>معلومات الموظفين</legend>
-            <table>
+            <table class="table table-striped custab data">
                 <thead>
                     <tr>
                         <th>الاسم</th>

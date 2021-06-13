@@ -25,7 +25,7 @@ class EmployeesModel extends AbstractModel {
       'gender'      => self::DATA_TYPE_INT,
       'shift'       => self::DATA_TYPE_INT,
       'systems'     => self::DATA_TYPE_STR,
-      'notes'        => self::DATA_TYPE_STR
+      'notes'       => self::DATA_TYPE_STR
     );
 
     protected static $primaryKey = 'id';

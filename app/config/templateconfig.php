@@ -37,5 +37,9 @@ return [
         'bootstrap_min'      => JS . 'bootstrap.min.js',
         'form'               => JS . 'form.js',
         'site_js'            => JS . 'site_js.min.js',
+        'jquery2'            => JS . 'vendor/jquery-1.12.0.min.js',
+        'helper'             => JS . 'helper.js',
+        'datatables_ar'      => JS . 'datatablesar.js',
+        'main'               => JS . 'main.js'
     ]
 ];
