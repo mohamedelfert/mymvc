@@ -21,14 +21,17 @@ class Template
     }
 
     public function setTemplateHeaderStart(){
+        extract($this->_data);
         require_once TEMPLATE_PATH . 'templateheaderstart.php';
     }
 
     public function setTemplateHeaderEnd(){
+        extract($this->_data);
         require_once TEMPLATE_PATH . 'templateheaderend.php';
     }
 
     public function setTemplateFooter(){
+        extract($this->_data);
         require_once TEMPLATE_PATH . 'templatefooter.php';
     }
 

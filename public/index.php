@@ -2,6 +2,7 @@
 
 namespace MYMVC;
 use MYMVC\Lib\FrontController;
+use MYMVC\Lib\Languages;
 use MYMVC\Lib\Template;
 
 if (!defined('DS')){
@@ -14,6 +15,7 @@ $template_parts = require_once '..' . DS . 'app' . DS . 'config' . DS . 'templat
 session_start();
 
 $template = new Template($template_parts);
+$languages = new Languages();
 
-$frontController = new FrontController($template);
+$frontController = new FrontController($template,$languages);
 $frontController->dispatch();

@@ -12,16 +12,16 @@
     <!-- Show Employees Information -->
     <div class="show_info">
         <fieldset>
-            <legend>معلومات الموظفين</legend>
+            <legend><?= @$text_employees_title ?></legend>
             <table class="table table-striped custab data">
                 <thead>
                     <tr>
-                        <th>الاسم</th>
-                        <th>السن</th>
-                        <th>العنوان</th>
-                        <th>الراتب</th>
-                        <th>الضريبه</th>
-                        <th>اداره</th>
+                        <th><?= @$text_employees_name ?></th>
+                        <th><?= @$text_employees_age ?></th>
+                        <th><?= @$text_employees_address ?></th>
+                        <th><?= @$text_employees_salary ?></th>
+                        <th><?= @$text_employees_tax ?></th>
+                        <th><?= @$text_employees_options ?></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -46,7 +46,7 @@
                         }
                     }else{
                         ?>
-                        <td colspan="6"><p>عفوا لا يوجد موظفين في القائمه حاليا !</p></td>
+                        <td colspan="6"><p><?= @$text_employees_no_employees ?></p></td>
                         <?php
                     }
                     ?>
@@ -55,7 +55,7 @@
             </table>
         </fieldset>
 
-        <a href="/employees/add" class="btn btn-success my-btn">اضافه موظف جديد</a>
+        <a href="/employees/add" class="btn btn-success my-btn"><?= @$text_employees_add_new_employees ?></a>
 
     </div>
 

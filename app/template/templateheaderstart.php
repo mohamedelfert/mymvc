@@ -2,6 +2,6 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Elfert Shop</title>
+        <title><?= @$text_title ?></title>
         <!-- Website Icon -->
         <link href="/images/logo.ico" rel="icon"/>

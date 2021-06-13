@@ -9,6 +9,7 @@ class AbstractController
     protected $_action;
     protected $_params;
     protected $_template;
+    protected $_languages;
 
     protected $_data = [];
 
@@ -32,6 +33,10 @@ class AbstractController
         $this->_template = $template;
     }
 
+    public function setLanguages($languages){
+        $this->_languages = $languages;
+    }
+
     protected function _view(){
         if ($this->_action === FrontController::NOT_FOUND_ACTION){
             $view = VIEW_PATH . 'notfound' . DS . 'notfound.view.php';
@@ -41,6 +46,7 @@ class AbstractController
         }else{
             $view = VIEW_PATH . $this->_controller . DS . $this->_action . '.view.php';
             if (file_exists($view)){
+                $this->_data = array_merge($this->_data,$this->_languages->getDictionary());
                 // render all data and view by using template class that handle all required files for template
                 $this->_template->setActionViewFile($view);
                 $this->_template->setAppData($this->_data);
